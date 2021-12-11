@@ -1,0 +1,14 @@
+<div class="navbar">
+  <h1> Wikinimous </h1>
+  <%= link_to 'New Article', new_article_path%>
+</div>
+
+<div class="box">
+  <ul>
+    <% @articles.each do |article| %>
+    <li>
+    <%= link_to article.title, article_path(article)%><br>
+    <p><%= article.content %></p>
+    <% end %></li>
+  </ul>
+</div>
